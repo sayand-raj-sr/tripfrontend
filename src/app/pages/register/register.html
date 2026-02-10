@@ -1,0 +1,51 @@
+
+
+<div class="container d-flex align-items-center justify-content-center min-vh-100 py-5">
+    <div class="register-card">
+        
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary"><i class="fas fa-mountain me-2"></i>TRAVO</h2>
+            <p class="text-muted small">Start your journey with us today.</p>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4 p-md-5">
+                <form (ngSubmit)="register()">
+                    <div class="row g-3 mb-3">
+                       
+                            <label class="form-label small fw-semibold">username</label>
+                            <input [(ngModel)]="user.username" type="text" name="username" class="form-control rounded-3" placeholder="John" required>
+                       
+                        
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Email Address</label>
+                        <input [(ngModel)]="user.email" name="email" type="email" class="form-control rounded-3" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-semibold">Password</label>
+                        <input [(ngModel)]="user.password" type="password" name="password" class="form-control rounded-3" placeholder="Create a password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold mb-3">
+                        Create Account
+                    </button>
+
+                    <p class="text-center small text-muted mb-0">
+                        Already have an account? <a href="/login" class="text-decoration-none fw-bold">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-muted" style="font-size: 0.8rem;">
+                By signing up, you agree to our <br>
+                <a href="#" class="text-muted text-decoration-underline">Terms</a> & <a href="#" class="text-muted text-decoration-underline">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</div>
+

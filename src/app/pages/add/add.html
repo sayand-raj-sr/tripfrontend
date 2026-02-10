@@ -1,0 +1,52 @@
+<div class="container p-4 mt-5">
+  <h3 class="fw-bold mb-4 text-center">{{title}}</h3>
+  <form [formGroup]="addformdata" (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label fw-bold">Destination Name</label>
+      <input type="text" class="form-control" placeholder="Enter destination name" formControlName="destination_name">
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Date</label>
+        <input type="date" class="form-control" formControlName="date">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Time</label>
+        <input type="time" class="form-control" formControlName="time">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Location</label>
+      <input type="text" class="form-control" placeholder="Enter location" formControlName="location">
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">State</label>
+        <input type="text" class="form-control" placeholder="Enter state" formControlName="state">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">District</label>
+        <input type="text" class="form-control" placeholder="Enter district" formControlName="district">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Description</label>
+      <textarea class="form-control" rows="3" placeholder="Write a short description" formControlName="description"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Image URL</label>
+      <input type="text" class="form-control" placeholder="Paste image link" formControlName="image_url">
+    </div>
+
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary px-5 rounded-pill">
+        {{ tripdata?.id ? 'Update Trip' : 'Save Trip' }}
+      </button>
+    </div>
+  </form>
+</div>
