@@ -16,7 +16,8 @@ export class Apiservice {
     return this.http.get<tripmodel[]>(this.apiURL+'/trip')
   }
   getsingledataAPI(id:number){
-   return this.http.get<tripmodel[]>(this.apiURL+'/trip/'+id)
+  //  return this.http.get<tripmodel[]>(this.apiURL+'/trip/'+id)
+  return this.http.get(`${this.apiURL}/trip/${id}`)
   }
   deletedataAPI(id:number){
     return this.http.delete(this.apiURL+'/trip/'+id)
