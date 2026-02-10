@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Apiservice {
-  apiURL='https://tripbackend-mrlf.onrender.comhttps://tripbackend-mrlf.onrender.com'
+  apiURL='https://tripbackend-mrlf.onrender.com'
   constructor(private http:HttpClient){
 
   }
